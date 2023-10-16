@@ -1,14 +1,19 @@
 import Link from "next/link";
 import { fetchBlogs } from "@/lib/blog";
-import Blog from "./component/blog";
-const BlogPage = () => {
-  const blogs = fetchBlogs();
+
+const MasterBlogPage = async () => {
+  const blogs = await fetchBlogs();
   return (
     <>
       <Link href="/">Back to Home</Link>
-      {blogs && blogs.map((blog, idx) => <Blog content={blog} key={idx} />)}
+      {blogs &&
+        blogs.map(({ id, title }, idx) => (
+          <div key={idx}>
+            <Link href={`/blog/${id}`}>{title}</Link>
+          </div>
+        ))}
     </>
   );
 };
 
-export { BlogPage as default };
+export { MasterBlogPage as default };
