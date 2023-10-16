@@ -21,7 +21,7 @@ export default function RootLayout({
         <nav>
           <h2>Global NavBar</h2>
           <Link href="/about">About</Link>
-          <Link href="/post">Post</Link>
+          <Link href="/blog">Post</Link>
         </nav>
         {children}
       </body>
