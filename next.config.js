@@ -1,6 +1,3 @@
-npm install --save-dev sass
-
-```javascript
 const path = require("path");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,4 +7,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-```
