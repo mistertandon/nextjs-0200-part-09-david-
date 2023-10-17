@@ -20,8 +20,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav>
           <h2>Global NavBar</h2>
-          <Link href="/about">About</Link>
-          <Link href="/blog">Post</Link>
+          <Link prefetch={false} href="/about">About</Link>
+          <Link prefetch={false} href="/blog">Post</Link>
         </nav>
         {children}
       </body>

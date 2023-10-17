@@ -5,9 +5,10 @@ type BlogParams = {
     blogId: string;
   };
 };
+const revalidate = 5;
 const BlogPage = async ({ params: { blogId } }: BlogParams) => {
   const blog = await fetchBlogById(blogId);
-  console.log("blog", blog);
+
   return (
     <>
       <Blog content={blog} />
@@ -23,4 +24,4 @@ const generateStaticParams = async () => {
   }));
 };
 
-export { BlogPage as default, generateStaticParams };
+export { BlogPage as default, generateStaticParams, revalidate };
